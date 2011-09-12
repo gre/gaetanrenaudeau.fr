@@ -102,7 +102,7 @@ $(document).ready(function(){
   
   // Update height
   $(window).resize(function(){
-    $('#main').css('min-height', ($(window).height()-($('#wrapper').height()-$('#main').height())) - 30);
+    $('#main').css('min-height', ($(window).height()-($('#wrapper').height()-$('#main').height())));
   }).resize();
   
 });
