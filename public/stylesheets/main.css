@@ -523,6 +523,7 @@ nav ul li.videos a {
 #cv_content section {
   padding: 10px 40px;
   padding-bottom: 0;
+  text-align: center;
 }
 
 #cv_content section p {
