@@ -18,15 +18,27 @@ $(document).ready(function(){
       updatePage();
     });
   }());
-  
+
+  window.requestAnimFrame = (function(){
+    return  window.requestAnimationFrame       || 
+    window.webkitRequestAnimationFrame || 
+    window.mozRequestAnimationFrame    || 
+    window.oRequestAnimationFrame      || 
+    window.msRequestAnimationFrame     || 
+    function(/* function */ callback, /* DOMElement */ element){
+      window.setTimeout(callback, 1000 / 60);
+    };
+  })();
+
   // header animation
   (function(){
     if(!document.createElement('canvas').getContext) return;
     var canvas = null;
     var ctx = null;
     var lineCount = 5;
-    var i=0;
+    var date = new Date().getTime();
     var cycle = function() {
+      var i = (new Date().getTime() - date)/20;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for(var j=0; j<lineCount; ++j) {
         ctx.lineWidth = 2+4*(lineCount-j);
@@ -40,13 +52,12 @@ $(document).ready(function(){
         ctx.bezierCurveTo(canvas.width/3, cpy1, 2*canvas.width/3, cpy2, canvas.width, y);
         ctx.stroke();
       }
-      i ++;
+      requestAnimFrame(cycle, canvas);
     };
     canvas = document.getElementById('headerAnimation');
     ctx = canvas.getContext('2d');
     i=1000+Math.floor(Math.random()*1000);
     cycle();
-    setInterval(cycle, 30); // draw cycle each 30ms
   }());
   
   // Projects
