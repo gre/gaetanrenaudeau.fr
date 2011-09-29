@@ -1,522 +1,70 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
+
   <head>
-    <title>Gaetan Renaudeau</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description" content="Gaëtan Renaudeau's professional website, student in computer science and trainee as a web developer. passionate about computers, free software and web.">
-    <meta name="keywords" content="Renaudeau Gaetan projects contact blog twitter professional website cv curriculum vitae html5 canvas javascript playframework web">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold,italic,bolditalic">
-    <link rel="stylesheet" type="text/css" media="screen" href="public/stylesheets/main.css">
+    <meta charset="UTF-8">
+    <title>Gaëtan Renaudeau</title>
+    <link rel="stylesheet" href="main.css" />
+    <link href='http://fonts.googleapis.com/css?family=Kreon|Ubuntu' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+  </head>
 
-    <link rel="shortcut icon" type="image/png" href="public/images/favicon.png">
-    <script type="text/javascript" src="public/javascripts/jquery-1.4.4.min.js"></script>
-    <script type="text/javascript" src="public/javascripts/jquery.ba-hashchange.min.js"></script>
-    <script type="text/javascript" src="public/javascripts/main.js"></script>
+  <body>
+    <div id="container">
 
-    <!--[if IE]>
-    <script type="text/javascript">
-      document.createElement("nav");
-      document.createElement("header");
-      document.createElement("footer");
-      document.createElement("canvas");
-      document.createElement("section");
-      document.createElement("article");
-      </script>
-      <![endif]-->
-    </head>
-    <body>
-      <canvas id="headerAnimation" width="820" height="85"></canvas>
-      <div id="wrapper">
-        <nav>
-          <ul>
-            <li class="home"><a href="#home">Welcome</a></li>
-            <li class="cv"><a href="#cv">CV</a></li>
-            <li class="projects"><a href="#projects">Portfolio</a></li>
-            <li class="videos"><a href="#videos">Videos</a></li>
-            <li class="twitter"><a href="#twitter">Twitter</a></li>
-            <li class="blog"><a href="#blog">Blog</a></li>
-          </ul>
-        </nav>
+      <aside>
+        <img src="http://farm5.static.flickr.com/4080/5410471068_41fedd5296_z.jpg" alt="" />
+      </aside>
 
+      <article>
         <header>
-          <h1>I'm Gaëtan Renaudeau</h1>
-          <div id="avatarContainer">
-            <img src="public/images/me.png" class="avatar" alt="avatar" />
-          </div>
+          <h1>
+            Hi. I'm <strong>Gaëtan Renaudeau</strong>, 
+            a <a href="http://zenexity.com/">zenexity</a> web worker,
+            available for <a href="mailto:renaudeau.gaetan@gmail.com">freelance</a>, 
+            studying for a master at <a href="http://www.ensiie.fr">ensiie</a>.
+          </h1>
         </header>
 
-        <div id="main">
-          <div class="main-page" id="page_home">
-            <figure class="avatar">
-              <img src="public/images/avatar.png" alt="photo" />
-            </figure>
-
-            <section class="hometext welcome">
-              <h2>Who?</h2>
-              <p>My name is Gaëtan Renaudeau, but you can call me <em>gre</em>.</p>
-              <p>I'm a 21-years-old computer <strong>student</strong> guy. I'm studying for a master in computer science at <a href="http://www.ensiie.fr" target="_blank">ensiie</a>.</p>
-              <p>I am also a <strong>web developer</strong> in <a href="http://zenexity.fr/" target="_blank">zenexity</a>, a "software design and web oriented architectures" company.</p>
-              <p>I am also a <strong>freelancer</strong>, you can contact my at <a href="mailto:renaudeau.gaetan@gmail.com">renaudeau.gaetan@gmail.com</a>.</p>
-              <h2>Why?</h2>
-              <p>I'm convinced by web technologies. It's an unique and standard way to build interconnected applications for all kind of devices (computers, mobiles, readers, ...). I'm also passionated by open source, AI algorithms and infographics.</p>
-              <p>I especially enjoy making mobile web games. My last one was <a href="http://same.greweb.fr/" target="_blank">Same Game Gravity</a>.</p>
-              <h2>What?</h2>
-              <p>You may look at my <a href="#cv">CV</a>, <a href="#projects">projects</a>, <a href="#blog">blog posts</a>, <a href="#videos">videos</a> and <a href="#twitter">twitts</a>.<p>
-            </section>
-          </div>
-          <div class="main-page" id="page_cv">
-
-            <a target="_blank" href="http://fr.linkedin.com/pub/gaetan-renaudeau/21/258/620">
-              <img src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x33.png" width="160" height="33" border="0" alt="View Gaetan Renaudeau's profile on LinkedIn">
-            </a>
-          
-          </div>
-          <div class="main-page" id="page_projects">
-
-            <p><em>This page will be improved soon...</em></p>
-
-            <h2>Current projects</h2>
-            <a href="http://demo.greweb.fr/" style="float: right;">Some others projects and demos are available here.</a>
-
-            <div class="project">
-              <h3>Same Game Gravity</h3>
-              <div class="video">
-
-                <iframe width="425" height="344" src="http://www.youtube.com/embed/Qyd69g9hmIY?html5=1" class="youtube-player"></iframe>
-              </div>
-              <div class="infos">
-                <dl>
-                  <dt>Language</dt>
-                  <dd>HTML5, CSS3, Javascript, PhoneGap</dd>
-                  <dt>Context</dt>
-
-                  <dd>Home made</dd>
-                  <dt>Date, Progression</dt>
-                  <dd>april 2011</dd>
-                  <dt>Description</dt>
-                  <dd>Same Game Gravity is a mind-bending ball removal puzzle game where you try to remove all of the balls from the board. Balls can only be removed when they are grouped with more balls of the same color. The balls are influenced by gravity - change gravity by rotating your mobile.</dd>
-                  <dt>Links</dt>
-
-                  <dd><a href="http://same.greweb.fr/">Checkout the mobile app</a></dd>
-                </dl>
-              </div>
-            </div>
-
-            <div class="project">
-              <h3>Light Them All</h3>
-              <div class="images">
-                <img alt="" src="public/images/lta/01.png" />
-
-                <img alt="" src="public/images/lta/02.png" style="display: none;" />
-              </div>
-              <div class="infos">
-                <dl>
-                  <dt>Language</dt>
-                  <dd>HTML5 + Javascript</dd>
-                  <dt>Context</dt>
-
-                  <dd>Home made</dd>
-                  <dt>Date, Progression</dt>
-                  <dd>Begun in June 2010</dd>
-                  <dt>Description</dt>
-                  <dd>Light Them All is a game in which the goal is to orient laser rays into receptors with mirrors.</dd>
-                  <dt>License</dt>
-
-                  <dd>will be GPL</dd>
-			          </dl>
-              </div>
-            </div>
-
-
-            <div class="project">
-              <h3>Battle Brushes</h3>
-              <div class="images">
-                <img alt="" src="public/images/bb/01.png" />
-
-                <img alt="" src="public/images/bb/02.png" style="display: none;" />
-                <img alt="" src="public/images/bb/03.png" style="display: none;" />
-                <img alt="" src="public/images/bb/04.png" style="display: none;" />
-              </div>
-              <div class="infos">
-                <dl>
-                  <dt>Language</dt>
-                  <dd>C++</dd>
-
-                  <dt>Context</dt>
-                  <dd>Home made</dd>
-                  <dt>Date, Progression</dt>
-                  <dd>First begun in C/C++ (2009). Working on a Javascript and HTML5 Canvas implementation.</dd>
-                  <dt>Description</dt>
-                  <dd>Battle brushes is a multiplayer video game wherein 4 brushes are fighting to own the best painted surface on screen. Each player use two keys to rotate (player moves forward automatically) in order to draw his color above rivals. The best painter win the match.</dd>
-
-                  <dt>License</dt>
-                  <dd>GPL</dd>
-                  <dt>Links</dt>
-			            <dd><a href="http://greweb.fr/demo/battlebrushes/">Current work (development version)</a></dd>
-                </dl>
-              </div>
-            </div>
-
-
-            <h2>Finished projects</h2>
-
-            <div class="project">
-              <h3>Seine et Marne Express - mobile</h3>
-              <div class="images">
-                <img alt="" src="public/images/sme-mobile/01.png" />
-                <img alt="" src="public/images/sme-mobile/02.png" style="display: none;" />
-                <img alt="" src="public/images/sme-mobile/03.png" style="display: none;" />
-
-              </div>
-              <div class="infos">
-                <dl>
-                  <dt>Language</dt>
-                  <dd>HTML5, Javascript</dd>
-                  <dt>Context</dt>
-                  <dd>Made in Zenexity for Conseil Général de Seine et Marne</dd>
-
-                  <dt>Date, Progression</dt>
-                  <dd>2010 ending</dd>
-                  <dt>Description</dt>
-                  <dd>Seine et Marne Express mobile is a mobile.seine-et-marne.fr widget to consult Seine et Marne (France) bus timetables.</dd>
-                  <dt>Links</dt>
-                  <dd><a href="http://mobile.seine-et-marne.fr/">Checkout the mobile app</a></dd>
-
-                </dl>
-              </div>
-            </div>
-
-            <div class="project">
-              <h3>Smart-Store.fr</h3>
-              <div class="images">
-                <img alt="" src="public/images/smartstore/01.png" />
-              </div>
-              <div class="infos">
-
-                <dl>
-                  <dt>Language</dt>
-                  <dd>Java (play! framework), HTML5, CSS3, Javascript</dd>
-                  <dt>Context</dt>
-                  <dd>Freelance</dd>
-                  <dt>Date, Progression</dt>
-
-                  <dd>2010 ending</dd>
-                  <dt>Description</dt>
-                  <dd>&lt;&lt; Smart Store c'est: Une boutique purement dédiée à la découverte. Venez y tester des produits de marques innovantes, originales et trendy. Vous avez ainsi la possibilité d’emporter chez vous 5 goodies par semaine (échantillons parfums&amp;cosmétiques, boissons…), et d’en tester d’autres sur place. &gt;&gt;</dd>
-                  <dt>Links</dt>
-			            <dd><a href="http://smart-store.fr/">Checkout this website</a></dd>
-
-                </dl>
-              </div>
-            </div>
-
-            <div class="project">
-              <h3>Morpion Solitaire</h3>
-              <div class="images">
-                <img alt="" src="public/images/morpion-solitaire/01.png" />
-                <img alt="" src="public/images/morpion-solitaire/02.png" style="display: none;" />
-                <img alt="" src="public/images/morpion-solitaire/03.png" style="display: none;" />
-
-              </div>
-              <div class="infos">
-                <dl>
-                  <dt>Language</dt>
-                  <dd>C (and ncurses)</dd>
-                  <dt>Context</dt>
-                  <dd>University</dd>
-
-                  <dt>Date, Progression</dt>
-                  <dd>December 2010</dd>
-                  <dt>Description</dt>
-                  <dd>A morpion solitaire game implementation in C using ncurses.</dd>
-                  <dt>License</dt>
-                  <dd>GPL</dd>
-
-                  <dt>Links</dt>
-                  <dd><a href="http://github.com/gre/morpion-solitaire/">Checkout the project on Github</a></dd>
-                </dl>
-              </div>
-            </div>
-
-            <div class="project">
-              <h3>HTTP Mock module for Play! framework</h3>
-              <div class="images">
-
-                <img alt="" src="public/images/httpmock/02.png" />
-                <img alt="" src="public/images/httpmock/01.png" style="display: none;" />
-                <img alt="" src="public/images/httpmock/03.png" style="display: none;" />
-              </div>
-              <div class="infos">
-                <dl>
-                  <dt>Language</dt>
-                  <dd>Java</dd>
-
-                  <dt>Context</dt>
-                  <dd>Zenexity R&amp;D</dd>
-                  <dt>Date, Progression</dt>
-                  <dd>October 2010</dd>
-                  <dt>Description</dt>
-                  <dd>HTTP Mock is a Play! framework module allowing you to cache WebService requests to overcome connection problems (lag, denial of service, HTTP errors) for fast developping.</dd>
-
-                  <dt>Links</dt>
-			            <dd><a href="http://github.com/zenexity/play-httpmock/">Checkout the project on Github</a></dd>
-                </dl>
-              </div>
-            </div>
-
-            <div class="project">
-              <h3>Tsunami</h3>
-              <div class="images">
-
-                <img alt="" src="public/images/tsunami/05.png" />
-                <img alt="" src="public/images/tsunami/01.png" style="display: none;" />
-                <img alt="" src="public/images/tsunami/02.png" style="display: none;" />
-                <img alt="" src="public/images/tsunami/03.png" style="display: none;" />
-                <img alt="" src="public/images/tsunami/04.png" style="display: none;" />
-              </div>
-              <div class="infos">
-                <dl>
-                  <dt>Language</dt>
-
-                  <dd>Java (Play! framework), HTML 5 and SASS (CSS evolution)</dd>
-                  <dt>Context</dt>
-                  <dd>University second year project - made with a partner</dd>
-                  <dt>Date, Progression</dt>
-                  <dd>Begun in october 2009</dd>
-                  <dt>Description</dt>
-
-                  <dd>Realtime collaborative application inspired by Google Wave.</dd>
-			            <dt>Links</dt>
-			            <dd><a href="http://github.com/adrenalinup/Tsunami/">Project source code on github</a></dd>
-                </dl>
-              </div>
-            </div>
-
-            <div class="project">
-	            <h3>University Nostalgia</h3>
-
-	            <div class="images">
-                <img alt="" src="public/images/university_nostalgia/08.png" />
-			          <img alt="" src="public/images/university_nostalgia/01.png" style="display: none;" />
-			          <img alt="" src="public/images/university_nostalgia/02.png" style="display: none;" />
-			          <img alt="" src="public/images/university_nostalgia/03.png" style="display: none;" />
-			          <img alt="" src="public/images/university_nostalgia/04.png" style="display: none;" />
-			          <img alt="" src="public/images/university_nostalgia/05.png" style="display: none;" />
-			          <img alt="" src="public/images/university_nostalgia/06.png" style="display: none;" />
-			          <img alt="" src="public/images/university_nostalgia/07.png" style="display: none;" />
-
-	            </div>
-	            <div class="infos">
-		            <dl>
-			            <dt>Language</dt>
-			            <dd>Java (Play! framework), HTML 5 and SASS (CSS evolution)</dd>
-			            <dt>Context</dt>
-			            <dd>University project - made with a partner</dd>
-
-			            <dt>Date, Progression</dt>
-			            <dd>mars 2010</dd>
-			            <dt>Description</dt>
-			            <dd>Social network application for university students.</dd>
-			            <dt>License</dt>
-			            <dd>GPL</dd>
-
-			            <dt>Links</dt>
-			            <dd><a href="http://github.com/gre/University-nostalgia">Project source code on github</a></dd>
-		            </dl>
-	            </div>
-            </div>
-            <div class="project">
-	            <h3>Same Game</h3>
-	            <div class="images">
-
-			          <img alt="" src="public/images/same/01.png" />
-			          <img alt="" src="public/images/same/02.png" style="display: none;" />
-			          <img alt="" src="public/images/same/03.png" style="display: none;" />
-			          <img alt="" src="public/images/same/04.png" style="display: none;" />
-			          <img alt="" src="public/images/same/05.png" style="display: none;" />
-	            </div>
-	            <div class="infos">
-		            <dl>
-			            <dt>Language</dt>
-
-			            <dd>Javascript (canvas)</dd>
-			            <dt>Context</dt>
-			            <dd>Home made</dd>
-			            <dt>Date, Progression</dt>
-			            <dd>february 2010</dd>
-			            <dt>Description</dt>
-
-			            <dd>HTML5 Canvas implementation of the Same Game.</dd>
-			            <dt>License</dt>
-			            <dd>GPL</dd>
-			            <dt>Links</dt>
-			            <dd><a href="http://greweb.fr/demo/same/">Game link</a></dd>
-		            </dl>
-
-	            </div>
-            </div>
-            <div class="project">
-	            <h3>Tune In</h3>
-	            <div class="images">
-			          <img alt="" src="public/images/tunein/01.png" />
-			          <img alt="" src="public/images/tunein/02.png" style="display: none;" />
-			          <img alt="" src="public/images/tunein/03.png" style="display: none;" />
-	            </div>
-
-	            <div class="infos">
-		            <dl>
-			            <dt>Language</dt>
-			            <dd>PHP, MySQL</dd>
-			            <dt>Context</dt>
-			            <dd>University second semester project - made with a partner</dd>
-			            <dt>Date, Progression</dt>
-
-			            <dd>may 2009</dd>
-			            <dt>Description</dt>
-			            <dd>Music share website.</dd>
-		            </dl>
-	            </div>
-            </div>
-            <div class="project">
-	            <h3>CoreWar</h3>
-
-	            <div class="images">
-			          <img alt="" src="public/images/cw/01.png" />
-			          <img alt="" src="public/images/cw/02.png" style="display: none;" />
-			          <img alt="" src="public/images/cw/03.png" style="display: none;" />
-			          <img alt="" src="public/images/cw/04.png" style="display: none;" />
-	            </div>
-	            <div class="infos">
-		            <dl>
-			            <dt>Language</dt>
-
-			            <dd>C</dd>
-			            <dt>Context</dt>
-			            <dd>University second semester project - made alone</dd>
-			            <dt>Date, Progression</dt>
-			            <dd>may 2009</dd>
-			            <dt>Description</dt>
-
-			            <dd>Core War (or Core Wars) is a programming game in which two or more battle programs (called "warriors") compete for the control of the "Memory Array Redcode Simulator" virtual computer ("MARS"). These battle programs are written in an abstract assembly language called Redcode. The object of the game is to cause all processes of the opposing program(s) to terminate, leaving your program in sole possession of the machine. (<a href="http://en.wikipedia.org/wiki/Corewar">source</a>)<br/> This CoreWar Project has 9 instructions. Each instruction is represented on 32 bits and there are 4096 locations in the virtual machine memory.</dd>
-			            <dt>License</dt>
-			            <dd>GPL</dd>
-			            <dt>Links</dt>
-			            <dd><a href="http://github.com/gre/Corewar">Project source code on github</a></dd>
-
-		            </dl>
-	            </div>
-            </div>
-            <div class="project">
-	            <h3>Mastermind</h3>
-	            <div class="images">
-			          <img alt="" src="public/images/mastermind/03.png" />
-			          <img alt="" src="public/images/mastermind/01.png" style="display: none;" />
-			          <img alt="" src="public/images/mastermind/02.png" style="display: none;" />
-			          <img alt="" src="public/images/mastermind/04.png" style="display: none;" />
-			          <img alt="" src="public/images/mastermind/05.png" style="display: none;" />
-			          <img alt="" src="public/images/mastermind/06.png" style="display: none;" />
-	            </div>
-	            <div class="infos">
-		            <dl>
-			            <dt>Language</dt>
-			            <dd>C</dd>
-
-			            <dt>Context</dt>
-			            <dd>University first semester project - made alone</dd>
-			            <dt>Date, Progression</dt>
-			            <dd>december 2008</dd>
-			            <dt>Description</dt>
-			            <dd>Mastermind or Master Mind is a simple code-breaking board game for two players. The project was to develop a C-version of mastermind with a simplified graphic library of University (using linux X graphic server).</dd>
-
-			            <dt>License</dt>
-			            <dd>Undistributed due to project's restrictions.</dd>
-		            </dl>
-	            </div>
-            </div>
-          </div>
-          <div class="main-page" id="page_videos">
-
-            <h2>Zengularity videos</h2>
-
-            <p class="floatright">
-            <a href="http://zengularity.com/">More videos on Zengularity.com</a>
-            </p>
-
-            <ul class="videos">
-              <li class="video">
-              <figure><a href="http://zengularity.com/item/1583389563/les-transitions-css3-un-exemple-de-diaporama-dimages">
-                  <img src="public/images/103431676_200.jpg" alt="preview"></a></figure>
-              <span class="date">Mon, 15 Nov 2010 15:31:00</span>
-              <h3 class="title"><a href="http://zengularity.com/item/item/1583389563/les-transitions-css3-un-exemple-de-diaporama-dimages">Les transitions CSS3 : un exemple de diaporama d'images</a></h3>
-
-              <div class="description">
-                <p>Les transitions CSS3 permettent d’éviter l’utilisation du Flash ou de librairies d’animations Javascript. C’est une alternative performante car elle utilise le moteur de rendu natif du navigateur. De plus, cette solution simple et standard offre une dégradation intéressante sur les navigateurs plus anciens.</p>
-              </div>
-              </li>
-              <li class="video">
-              <figure><a href="http://zengularity.com/item/1091933271/resolution-parallele-de-nombres-premiers-web-workers">
-                  <img src="public/images/84670627_200.jpg" alt="preview"></a></figure>
-              <span class="date">Thu, 09 Sep 2010 10:56:00</span>
-
-              <h3 class="title"><a href="http://zengularity.com/item/1091933271/resolution-parallele-de-nombres-premiers-web-workers">Résolution parallèle de nombres premiers avec les Web Workers</a></h3>
-              <div class="description">
-                <p>Web Workers est une technologie du HTML5 qui permet d’exécuter des scripts en arrière-plan en préservant la stabilité du navigateur. Un exemple sur la recherche des nombres premiers parmi une liste de nombres illustre l’intérêt des Web Workers pour le multi-tâche.</p>
-              </div>
-              </li>
-            </ul>
-          </div>
-          <div class="main-page" id="page_twitter">
-
-
-            <h2><span class="loadMessage twitter floatleft"><img src="public/images/load.gif" alt="" />&nbsp;&nbsp;</span>Last messages on twitter</h2>
-            <p class="followme external">
-            <a href="http://twitter.com/greweb">
-              Follow me
-            </a>
-            </p>
-
-            <noscript>See twitts on <a href="http://twitter.com/greweb">my twitter account</a>.</noscript>
-
-            <script src="http://widgets.twimg.com/j/2/widget.js"></script>
-            <script type="text/javascript">
-              $(function(){
-                  new TWTR.Widget({
-version: 2, type: 'profile', rpp: 12, interval: 6000, width: 'auto', height: 400,
-theme: { shell: { background: '#fff', color: '#123' }, tweets: { background: '#fff', color: '#444', links: '#940' } },
-features: { scrollbar: false, loop: false, live: false, hashtags: true, timestamp: true, avatars: false, behavior: 'all' }
-}).render().setUser('greweb').start();
-                  $('.twitter.loadMessage').hide(); // load ended
-                  }());
-
-</script>
-              </div>
-              <div class="main-page" id="page_blog">
-
-                <h2>
-                  <span class="loadMessage blog floatleft">
-                    <img src="public/images/load.gif" alt="..."/>&nbsp;&nbsp;
-                  </span>
-                  <span>Latest blog posts</span>
-                </h2>
-
-
-                <p class="external"><a href="http://blog.greweb.fr/">Visit my blog</a></p>
-
-                <div id="blog_articles" style="display: none;">
-                  <ul class="articles"></ul>
-                </div>
-              </div>
-            </div>
-            <footer>
-              <a target="_blank" href="http://blog.greweb.fr/">Blog</a> - 
-              <a target="_blank" href="http://greweb.fr/demo/">HTML demos</a> - 
-              <a target="_blank" href="http://twitter.com/greweb">Twitter</a> - 
-              <a target="_blank" href="http://www.linkedin.com/pub/gaetan-renaudeau/21/258/620">LinkedIn</a> - 
-              <a target="_blank" href="http://github.com/gre">GitHub</a> - 
-              <a target="_blank" href="http://zengularity.com/">Zengularity</a> - 
-              <a target="_blank" href="http://zenexity.fr/">My company</a>
-
-            </footer>
-          </div>
-        </body>
-      </html>
+        <section>
+          <p>Web is <a href="http://diveintohtml5.org/introduction.html">simple</a>, <a href="http://w3.org/">standard</a>, <a href="http://blog.greweb.fr/2011/07/same-game-gravity-technical-notes/">portable</a>, <a href="http://www.zengularity.com/item/1469774792">robust</a>. At my <a href="http://zenexity.com/">job</a>, I build web applications for leading companies and I do some <a href="http://www.zengularity.com/event/1237889561">talks</a> and <a href="http://www.zengularity.com/item/1583389563">videos</a>. On my own time, I do projects and games like <a href="http://same.greweb.fr">Same Game Gravity</a>.</p>
+          <p>
+          I usually 
+          <a href="http://blog.greweb.fr/">blog</a>, 
+          <a href="http://twitter.com/greweb">twitt</a>, 
+          <a href="http://www.linkedin.com/pub/gaetan-renaudeau/21/258/620">socialize</a>, 
+          <a href="http://demo.greweb.fr/">experiment</a> and 
+          <a href="http://github.com/gre">code</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Last articles</h2>
+          <ul id="articles">...</ul>
+          <script type="text/javascript">
+            $(function(){
+              $.getJSON('http://blog.greweb.fr/feed?feed=json&jsonp=?', function(data){
+               data.splice(3);
+                $('#articles').empty().append($.map(data, function(a){
+                    return $('<li class="article">'+
+                               '<a href="'+a.permalink+'" class="title">'+a.title+'</a>'+
+                               '<time>'+a.date+'</time>'+
+                             '</li>').
+                           attr('title', $('<span />').html(a.excerpt).text() )[0];
+                }));
+              });
+            });
+          </script>
+  </section>
+
+        <section>
+          <h2>Last twitts</h2>
+          <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+          <script type="text/javascript">
+            new TWTR.Widget({ version: 2, type: 'profile', rpp: 3, interval: 6000, width: 'auto', height: 400, theme: { shell: { background: '#fff', color: '#123' }, tweets: { background: '#fff', color: '#444', links: '#270' } }, features: { scrollbar: false, loop: false, live: false, hashtags: true, timestamp: true, avatars: false, behavior: 'all' } }).render().setUser('greweb').start();
+          </script>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
