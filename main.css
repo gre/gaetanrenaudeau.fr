@@ -24,6 +24,8 @@ a {
 }
 a:hover { text-decoration: underline; }
 
+abbr { border: none; }
+
 article header {
   color: #333;
 }
@@ -42,6 +44,9 @@ aside {
 
 .twtr-hd, .twtr-ft {
   display: none;
+}
+.twtr-widget .twtr-tweet {
+  border: none !important;
 }
 
 #articles {
@@ -65,3 +70,14 @@ aside {
   white-space: nowrap;
   overflow: hidden;
 }
+footer {
+  clear: both;
+  margin: 10px;
+  padding: 10px;
+  font-size: 1.2em;
+  text-align: center;
+}
+footer a {
+  color: #666;
+}
+
