@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="main.css" />
     <link href='http://fonts.googleapis.com/css?family=Kreon|Ubuntu' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script type="text/javascript" src="pretty.js"></script>
+    <script>
+$(function(){
+  $('a[href^=http]').live('click', function(e){ e.preventDefault(); window.open($(this).attr('href')) }); // Open all http* links in a new window
+});
+    </script>
   </head>
 
   <body>
@@ -26,7 +32,7 @@
         </header>
 
         <section>
-          <p>Web is <a href="http://diveintohtml5.org/introduction.html">simple</a>, <a href="http://w3.org/">standard</a>, <a href="http://blog.greweb.fr/2011/07/same-game-gravity-technical-notes/">portable</a>, <a href="http://www.zengularity.com/item/1469774792">robust</a>. At my <a href="http://zenexity.com/">job</a>, I build web applications for leading companies and I do some <a href="http://www.zengularity.com/event/1237889561">talks</a> and <a href="http://www.zengularity.com/item/1583389563">videos</a>. On my own time, I do projects and games like <a href="http://same.greweb.fr">Same Game Gravity</a>.</p>
+          <p>Web is <a href="http://diveintohtml5.info/introduction.html">simple</a>, <a href="http://w3.org/">standard</a>, <a href="http://blog.greweb.fr/2011/07/same-game-gravity-technical-notes/">portable</a>, <a href="http://www.zengularity.com/item/1469774792">robust</a>. At my <a href="http://zenexity.com/">job</a>, I build web applications for leading companies and I do some <a href="http://www.zengularity.com/event/1237889561">talks</a> and <a href="http://www.zengularity.com/item/1583389563">videos</a>. On my own time, I do projects and games like <a href="http://same.greweb.fr">Same Game Gravity</a>.</p>
           <p>
           I usually 
           <a class="url" href="http://blog.greweb.fr/">blog</a>, 
@@ -47,7 +53,7 @@
                 $('#articles').empty().append($.map(data, function(a){
                     return $('<li class="article">'+
                                '<a href="'+a.permalink+'" class="title">'+a.title+'</a>'+
-                               '<time>'+a.date+'</time>'+
+                               '<time>'+(prettyDate( (a.date) )||a.date)+'</time>'+
                              '</li>').
                            attr('title', $('<span />').html(a.excerpt).text() )[0];
                 }));
