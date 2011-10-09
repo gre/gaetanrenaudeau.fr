@@ -4,7 +4,7 @@
   <head profile="http://www.w3.org/2006/03/hcard">
     <meta charset="UTF-8">
     <title>Gaëtan Renaudeau</title>
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="main.css?v=2" />
     <link href='http://fonts.googleapis.com/css?family=Kreon|Ubuntu' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
     <script type="text/javascript" src="pretty.js"></script>
@@ -17,11 +17,6 @@ $(function(){
 
   <body>
     <div id="container" class="vcard">
-      <aside>
-        <img class="photo" src="http://farm5.static.flickr.com/4080/5410471068_41fedd5296_z.jpg" alt="" />
-      </aside>
-
-      <article>
         <header>
           <h1>
             Hi. I'm <strong class="fn"><span class="given-name">Gaëtan</span> <span class="family-name">Renaudeau</span></strong>, 
@@ -29,8 +24,17 @@ $(function(){
             available for <a href="mailto:renaudeau.gaetan@gmail.com">freelance</a>, 
             studying for a master at <a href="http://www.ensiie.fr">ensiie</a>.
           </h1>
+          <h2>See my <a href="portfolio">portfolio</a>.</h2>
         </header>
 
+      <aside>
+        <img class="photo" src="http://farm5.static.flickr.com/4080/5410471068_41fedd5296_z.jpg" alt="" />
+
+
+      </aside>
+
+      <article id="home">
+        
         <section>
           <p>Web is <a href="http://diveintohtml5.info/introduction.html">simple</a>, <a href="http://w3.org/">standard</a>, <a href="http://blog.greweb.fr/2011/07/same-game-gravity-technical-notes/">portable</a>, <a href="http://www.zengularity.com/item/1469774792">robust</a>. At my <a href="http://zenexity.com/">job</a>, I build web applications for leading companies and I do some <a href="http://www.zengularity.com/event/1237889561">talks</a> and <a href="http://www.zengularity.com/item/1583389563">videos</a>. On my own time, I do projects and games like <a href="http://same.greweb.fr">Same Game Gravity</a>.</p>
           <p>
@@ -43,7 +47,7 @@ $(function(){
           </p>
         </section>
 
-        <section>
+        <section class="articles">
           <h2>Last articles</h2>
           <ul id="articles">...</ul>
           <script type="text/javascript">
@@ -62,11 +66,11 @@ $(function(){
           </script>
   </section>
 
-        <section>
+        <section class="twitts">
           <h2>Last twitts</h2>
           <script src="http://widgets.twimg.com/j/2/widget.js"></script>
           <script type="text/javascript">
-            new TWTR.Widget({ version: 2, type: 'profile', rpp: 3, interval: 6000, width: 'auto', height: 400, theme: { shell: { background: '#fff', color: '#123' }, tweets: { background: '#fff', color: '#444', links: '#270' } }, features: { scrollbar: false, loop: false, live: false, hashtags: true, timestamp: true, avatars: false, behavior: 'all' } }).render().setUser('greweb').start();
+            new TWTR.Widget({ version: 2, type: 'profile', rpp: 3, interval: 6000, width: 'auto', height: 400, theme: { shell: { background: 'transparent', color: '#123' }, tweets: { background: 'transparent', color: '#444', links: '#270' } }, features: { scrollbar: false, loop: false, live: false, hashtags: true, timestamp: true, avatars: false, behavior: 'all' } }).render().setUser('greweb').start();
           </script>
         </section>
       </article>

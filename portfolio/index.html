@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Portfolio of Gaëtan Renaudeau</title>
+    <link rel="stylesheet" href="main.css" />
+    <link href='http://fonts.googleapis.com/css?family=Kreon|Ubuntu' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script>
+$(function(){
+  $('a[href^=http]').live('click', function(e){ e.preventDefault(); window.open($(this).attr('href')) }); // Open all http* links in a new window
+
+  if ( !window.requestAnimationFrame ) {
+    window.requestAnimationFrame = ( function() {
+      return window.webkitRequestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.oRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      function( /* function FrameRequestCallback */ callback, /* DOMElement Element */ element ) {
+        window.setTimeout( callback, 1000 / 60 );
+      };
+    } )();
+  }
+
+  var medias = $('ul.projects li .media');
+  var ready = function(){
+    medias.each(function(i){
+      var media = $(this);
+      if(media.find('img').size()>1) {
+        var canvas = $('<canvas />');
+        media.append(canvas);
+        var imgs = media.find('img').hide().map(function(){
+          return $(this).attr('src');
+        });
+        new CanvasSlider(canvas[0], imgs);
+      }
+    });
+  }
+  var all = medias.find('img');
+  var loaded = 0;
+  var total = all.size();
+  all.each(function(){
+    var img = new Image();
+    img.onload = function(){ if(++loaded == total) ready() }
+    img.src = $(this).attr('src');
+  });
+
+});
+    </script>
+  </head>
+
+  <body>
+    <div id="container" class="vcard">
+      <article>
+        <header>
+          <h1>Portfolio of<br/>
+            <a href="..">GRE</a></h2>
+        </header>
+
+        <section>
+          <ul class="projects">
+            <li>
+              <iframe width="300" height="300" class="youtube-player" src="http://www.youtube.com/embed/Qyd69g9hmIY?html5=1"></iframe>
+            </li>
+            <li>
+              <div class="content">
+                <h2>Same Game Gravity</h2>
+                <div class="description">Same Game Gravity is a mind-bending ball removal puzzle game where you try to remove all of the balls from the board. Balls can only be removed when they are grouped with more balls of the same color. The balls are influenced by gravity - change gravity by rotating your mobile.</div>
+                <div class="links">
+                  <a href="http://same.greweb.fr/">same.greweb.fr</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="content">
+                <div class="zengularity-video">
+                  <a href="http://www.zengularity.com/item/1583389563/les-transitions-css3-un-exemple-de-diaporama-dimages">
+                    <img src="images/103431676_200.jpg" class="video" alt="[VIDEO] Les Transitions CSS3 - Un exemple de diaporama d'images" />
+                    <span class="play" />
+                  </a>
+                </div>
+                <div>Les transitions CSS3, Un example de diaporama d'images</div>
+                <div class="links">
+                  <a href="http://www.zengularity.com/item/1583389563/les-transitions-css3-un-exemple-de-diaporama-dimages">Video on Zengularity</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="content">
+                <div class="zengularity-video"><a href="http://www.zengularity.com/item/1091933271/resolution-parallele-de-nombres-premiers-web-workers">
+                  <img src="images/84670627_200.jpg" class="video" alt="[VIDEO] Les Transitions CSS3 - Un exemple de diaporama d'images" />
+                  <span class="play" />
+              </a></div>
+              <div>Résolution parallèle de nombres premiers avec les Web Workers</div>
+              <div class="links">
+                <a href="http://www.zengularity.com/item/1091933271/resolution-parallele-de-nombres-premiers-web-workers">Video on Zengularity</a>
+              </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="media">
+                <img src="images/lta/01.png" />
+                <img src="images/lta/02.png" />
+              </div>
+              <div class="text content">
+                <h2>Light Them All</h2>
+                <div class="description">Light Them All is a game in which the goal is to orient laser rays into receptors with mirrors.</div>
+                <div>The game is in <strong>Work In Progress</strong>.</div>
+              </div>
+            </li>
+            <li>
+              <div class="media">
+                <img src="images/bb/01.png" alt="" />
+                <img src="images/bb/02.png" alt="" />
+                <img src="images/bb/03.png" alt="" />
+                <img src="images/bb/04.png" alt="" />
+              </div>
+              <div class="text content">
+                <h2>Battle Brushes</h2>
+                <div class="description">Battle brushes is a multiplayer video game wherein 4 brushes are fighting to own the best painted surface on screen. Each player use two keys to rotate (player moves forward automatically) in order to draw his color above rivals. The best painter win the match.</div>
+                <div class="links">
+                  <a href="http://demo.greweb.fr/battlebrushes/">Current Work In Progress</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media">
+                <img src="images/httpmock/01.png" alt="" />
+                <img src="images/httpmock/02.png" alt="" />
+                <img src="images/httpmock/03.png" alt="" />
+              </div>
+              <div class="text content">
+                <h2>HTTP Mock module for Play! framework</h2>
+                <div>HTTP Mock is a Play! framework module allowing you to cache WebService requests to overcome connection problems (lag, denial of service, HTTP errors) for fast developping.</div>
+              </div>
+            </li>
+            <li>
+              <div class="media">
+                <img src="images/sme-mobile/01.png" alt="" />
+                <img src="images/sme-mobile/02.png" alt="" />
+                <img src="images/sme-mobile/03.png" alt="" />
+              </div>
+              <div class="text content">
+                <h2>Seine et Marne Express (mobile)</h2>
+                <div class="description">Seine et Marne Express mobile is a widget for <a href="http://mobile.seine-et-marne.fr/">mobile.seine-et-marne.fr</a> which allows you to consult Seine et Marne (France) bus timetables.</div>
+                <div class="links">
+                  <a href="http://mobile.seine-et-marne.fr/">Browse the mobile website</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media">
+                <img src="images/smartstore/01.png" alt="" />
+              </div>
+              <div class="text content">
+                <h2>Smart Store</h2>
+                <div>Une boutique purement dédiée à la découverte ! Venez y tester des produits de marques innovantes, originales et trendy. Vous avez ainsi la possibilité d’emporter chez vous 5 goodies par semaine (échantillons parfums/cosmétiques, boissons, snacking), et d’en tester d’autres sur place.</div>
+                <div class="links">
+                  <a href="http://smart-store.fr/">Go to smart-store.fr</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media">
+                <img src="images/university_nostalgia/01.png" alt="" />
+                <img src="images/university_nostalgia/02.png" alt="" />
+                <img src="images/university_nostalgia/03.png" alt="" />
+                <img src="images/university_nostalgia/04.png" alt="" />
+                <img src="images/university_nostalgia/05.png" alt="" />
+                <img src="images/university_nostalgia/06.png" alt="" />
+                <img src="images/university_nostalgia/07.png" alt="" />
+                <img src="images/university_nostalgia/08.png" alt="" />
+              </div>
+              <div class="text content">
+                <h2>University Nostalgia</h2>
+                <div>A social network application bootstraped in one week for school made with a co-mate.</div>
+                <div class="links">
+                    <a href="http://github.com/gre/University-nostalgia">source code on Github</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media">
+                <img src="images/morpion-solitaire/01.png" alt="" />
+                <img src="images/morpion-solitaire/02.png" alt="" />
+              </div>
+              <div class="text content">
+                <h2>Morpion Solitaire</h2>
+                <div>A morpion solitaire game implementation in C using ncurses.</div>
+                <div class="links">
+                  <a href="http://github.com/gre/morpion-solitaire/">source code on Github</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media">
+                <img src="images/cw/01.png" alt="" />
+                <img src="images/cw/02.png" alt="" />
+                <img src="images/cw/03.png" alt="" />
+                <img src="images/cw/04.png" alt="" />
+              </div>
+              <div class="text content">
+                <h2>CoreWar</h2>
+                <div>CoreWar is a programming game in which two battle programs inside memory. Each program is written in an abstract assembly language. This CoreWar Project has 9 assembly instructions and virtual machine memory is limited to 4096 locations.</div>
+                <div>This was an university project written in C and made alone.</div>
+                <div class="links">
+                  <a href="http://github.com/gre/Corewar">source code on Github</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media">
+                <img src="images/mastermind/01.png" alt="" />
+                <img src="images/mastermind/02.png" alt="" />
+                <img src="images/mastermind/03.png" alt="" />
+                <img src="images/mastermind/04.png" alt="" />
+                <img src="images/mastermind/05.png" alt="" />
+                <img src="images/mastermind/06.png" alt="" />
+              </div>
+              <div class="text content">
+                <h2>Mastermind</h2>
+                <div>A project made at University and written in C.</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <footer>
+          email: <a class="email" href="mailto:renaudeau.gaetan@gmail.com">renaudeau.gaetan@gmail.com</a>
+        </footer>
+      </div>
+    </body>
+  </html>

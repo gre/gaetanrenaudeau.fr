@@ -2,7 +2,7 @@ body {
   font: 1em Ubuntu, sans-serif;
   background: #fff;
   font-weight: 400;
-  padding: 0px;
+  padding: 20px;
   margin: 0px;
 }
 
@@ -10,12 +10,34 @@ h1,h2,h3,h4 {
   font-weight: 400;
   font-family: Kreon, serif;
   line-height: 1.1em;
+  margin: 0.5em 0;
 }
 
-h1 { font-size: 2.0em; margin: 1em 0; }
-h2 { font-size: 1.8em; margin: 0.5em 0; }
+h1 { font-size: 2.0em; }
+h2 { font-size: 1.8em; }
 h3 { font-size: 1.6em; }
 h4 { font-size: 1.4em; }
+
+header {
+  padding: 10px 20px;
+}
+section {
+  padding: 10px 20px;
+}
+
+article#home > header, article#home > section {
+  border: 5px dashed white;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -webkit-transition: 0.3s background-color;
+  -moz-transition: 0.3s background-color;
+  -o-transition: 0.3s background-color;
+  transition: 0.3s background-color;
+}
+article#home > header:hover, article#home > section:hover {
+  background-color: #EFD;
+}
 
 a { 
   color:#33CC00; 
@@ -25,8 +47,11 @@ a:hover { text-decoration: underline; }
 
 abbr { border: none; }
 
-article header {
+header {
   color: #333;
+  margin: 0 auto;
+  width: 500px;
+  margin-bottom: 50px;
 }
 
 #container {
@@ -34,12 +59,20 @@ article header {
   margin: 0 auto;
 }
 article {
-  margin-left: 50px;
-  width: 500px;
+  width: 520px;
 }
 aside {
   float: right;
+  width: 360px;
 }
+section.articles {
+  min-height: 150px;
+}
+
+section.twitts {
+  min-height: 150px;
+}
+
 
 .twtr-hd, .twtr-ft {
   display: none;
