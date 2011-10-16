@@ -25,6 +25,22 @@ section {
   padding: 10px 20px;
 }
 
+nav.externalLinks {
+  text-align: center;
+  display: block;
+}
+nav.externalLinks a {
+  opacity: 0.8;
+  -moz-transform: translate(0, 4px);
+  -moz-transition: 0.2s -moz-transform;
+  -moz-transition-delay: 0.5s;
+}
+nav.externalLinks a:hover {
+  opacity: 1;
+  -moz-transform: translate(0, 0);
+  -moz-transition-delay: 0s;
+}
+
 article#home > header, article#home > section {
   border: 5px dashed white;
   border-radius: 20px;

@@ -17,6 +17,14 @@ $(function(){
 
   <body>
     <div id="container" class="vcard">
+      <nav class="externalLinks">
+        <a href="http://blog.greweb.fr" title="Blog"><img src="icons/wordpress_32.png" alt="Blog" /></a>
+        <a href="http://twitter.com/gre" title="Twitter"><img src="icons/twitter_32.png" alt="Twitter" /></a>
+        <a href="https://plus.google.com/u/0/106814078704983695311" title="Google Plus"><img src="icons/google_plus_32.png" alt="Google plus" /></a>
+        <a href="http://www.linkedin.com/pub/gaetan-renaudeau/21/258/620" title="LinkedIn"><img src="icons/linkedin_32.png" alt="LinkedIn" /></a>
+        <a href="http://vimeo.com/grenlibre" alt="Vimeo (videos)"><img src="icons/vimeo_32.png" alt="Vimeo" /></a>
+      </nav>
+
         <header>
           <h1>
             Hi. I'm <strong class="fn"><span class="given-name">Gaëtan</span> <span class="family-name">Renaudeau</span></strong>, 
@@ -49,7 +57,7 @@ $(function(){
 
         <section class="articles">
           <h2>Last articles</h2>
-          <ul id="articles">...</ul>
+          <ul id="articles"><img src="load.gif" /></ul>
           <script type="text/javascript">
             $(function(){
               $.getJSON('http://blog.greweb.fr/feed?feed=json&jsonp=?', function(data){
@@ -68,9 +76,11 @@ $(function(){
 
         <section class="twitts">
           <h2>Last twitts</h2>
+          <img id="twitterLoading" src="load.gif" />
           <script src="http://widgets.twimg.com/j/2/widget.js"></script>
           <script type="text/javascript">
             new TWTR.Widget({ version: 2, type: 'profile', rpp: 3, interval: 6000, width: 'auto', height: 400, theme: { shell: { background: 'transparent', color: '#123' }, tweets: { background: 'transparent', color: '#444', links: '#270' } }, features: { scrollbar: false, loop: false, live: false, hashtags: true, timestamp: true, avatars: false, behavior: 'all' } }).render().setUser('greweb').start();
+            $('#twitterLoading').remove();
           </script>
         </section>
       </article>
