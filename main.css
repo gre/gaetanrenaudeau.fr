@@ -97,6 +97,38 @@ section.twitts {
   border: none !important;
 }
 
+#twtr-widget-1 {
+  font-family: inherit !important;
+}
+
+#twtr-widget-1 .twtr-tweet a.twtr-user {
+    background: #0A0;
+    color: white !important;
+    padding: 0px 4px;
+    position: relative;
+    margin-right: 8px;
+}
+#twtr-widget-1 .twtr-tweet a.twtr-user:hover {
+  text-decoration: none !important;
+  background: #080 !important;
+}
+#twtr-widget-1 .twtr-tweet a.twtr-user:hover:after {
+    border-color: transparent transparent transparent #080;
+}
+#twtr-widget-1 .twtr-tweet a.twtr-user:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 8px solid;
+    content: " ";
+    border-color: transparent transparent transparent #0A0;
+    right: -15px;
+    top: 0;
+}
+#twtr-widget-1 .twtr-tweet em a {
+  color: #999 !important;
+}
+
 #articles {
   list-style: none;
   padding: 0;
