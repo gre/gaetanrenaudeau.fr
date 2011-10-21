@@ -5,46 +5,27 @@
     <meta charset="UTF-8">
     <title>Portfolio of Gaëtan Renaudeau</title>
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="../sliderjs/lib/slider.min.css" />
     <link href='http://fonts.googleapis.com/css?family=Kreon|Ubuntu' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="../sliderjs/lib/slider.min.js"></script>
     <script>
 $(function(){
   $('a[href^=http]').live('click', function(e){ e.preventDefault(); window.open($(this).attr('href')) }); // Open all http* links in a new window
 
-  if ( !window.requestAnimationFrame ) {
-    window.requestAnimationFrame = ( function() {
-      return window.webkitRequestAnimationFrame ||
-      window.mozRequestAnimationFrame ||
-      window.oRequestAnimationFrame ||
-      window.msRequestAnimationFrame ||
-      function( /* function FrameRequestCallback */ callback, /* DOMElement Element */ element ) {
-        window.setTimeout( callback, 1000 / 60 );
-      };
-    } )();
-  }
-
   var medias = $('ul.projects li .media');
-  var ready = function(){
-    medias.each(function(i){
-      var media = $(this);
-      if(media.find('img').size()>1) {
-        var canvas = $('<canvas />');
-        media.append(canvas);
-        var imgs = media.find('img').hide().map(function(){
-          return $(this).attr('src');
-        });
-        new CanvasSlider(canvas[0], imgs);
-      }
-    });
-  }
-  var all = medias.find('img');
-  var loaded = 0;
-  var total = all.size();
-  all.each(function(){
-    var img = new Image();
-    img.onload = function(){ if(++loaded == total) ready() }
-    img.src = $(this).attr('src');
+  medias.each(function(i){
+    var media = $(this);
+    var images = media.find('img');
+    if(images.size()>1) {
+      new Slider(media)
+        .setPhotos(images.map(function(){
+          return { src: $(this).attr('src') }
+        }))
+        .setSize(300, 300)
+        .setTransitionFunction(SliderTransitionFunctions.squareSunblind)
+        .start();
+    }
   });
 
 });
@@ -65,7 +46,11 @@ $(function(){
               <iframe width="300" height="300" class="youtube-player" src="http://www.youtube.com/embed/Qyd69g9hmIY?html5=1"></iframe>
             </li>
             <li>
-              <div class="content">
+            <div class="media">
+                <img src="images/same/01.png" />
+                <img src="images/same/02.png" />
+              </div>
+              <div class="text content">
                 <h2>Same Game Gravity</h2>
                 <div class="description">Same Game Gravity is a mind-bending ball removal puzzle game where you try to remove all of the balls from the board. Balls can only be removed when they are grouped with more balls of the same color. The balls are influenced by gravity - change gravity by rotating your mobile.</div>
                 <div class="links">
@@ -76,7 +61,8 @@ $(function(){
   
               <li>
               <div class="media">
-                <img src="images/sliderjs.png" />
+                <img src="images/sliderjs/01.png" />
+                <img src="images/sliderjs/02.png" />
               </div>
               <div class="text content">
                 <h2>Slider.js</h2>
@@ -91,7 +77,8 @@ Slider.js also uses HTML5 Canvas to perform some non trivial transitions.</div>
   
               <li>
               <div class="media">
-                <img src="images/flexiblenav.png" />
+                <img src="images/flexiblenav/01.png" />
+                <img src="images/flexiblenav/02.png" />
               </div>
               <div class="text content">
                 <h2>Flexible Nav library</h2>
@@ -187,6 +174,7 @@ Slider.js also uses HTML5 Canvas to perform some non trivial transitions.</div>
             <li>
               <div class="media">
                 <img src="images/smartstore/01.png" alt="" />
+                <img src="images/smartstore/02.png" alt="" />
               </div>
               <div class="text content">
                 <h2>Smart Store</h2>
