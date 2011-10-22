@@ -28,6 +28,12 @@ $(function(){
     }
   });
 
+  $('ul.projects li').each(function(i, li){
+    setTimeout(function(){
+      $(li).addClass('visible');
+    }, i*1000);
+  });
+
 });
     </script>
   </head>

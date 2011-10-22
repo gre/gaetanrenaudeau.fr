@@ -75,6 +75,14 @@ ul.projects li {
   float: left;
   box-shadow: 0px 3px 8px #999;
   position: relative;
+  opacity: 0;
+}
+ul.projects li.visible {
+  opacity: 1;
+  -webkit-transition: 1s opacity;
+  -moz-transition: 1s opacity;
+  -o-transition: 1s opacity;
+  transition: 1s opacity;
 }
 ul.projects li .media {
   opacity: 1;
