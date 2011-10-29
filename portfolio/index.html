@@ -23,7 +23,8 @@ $(function(){
           return { src: $(this).attr('src') }
         }))
         .setSize(300, 300)
-        .setTransitionFunction(SliderTransitionFunctions.squareSunblind)
+        .setTheme('no-control')
+        .setTransitionFunction(SliderTransitionFunctions.squares)
         .start();
     }
   });
@@ -31,7 +32,7 @@ $(function(){
   $('ul.projects li').each(function(i, li){
     setTimeout(function(){
       $(li).addClass('visible');
-    }, i*1000);
+    }, i*500);
   });
 
 });
