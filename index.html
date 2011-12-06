@@ -1,9 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="en">
 
-  <head profile="http://www.w3.org/2006/03/hcard">
+  <head>
     <meta charset="UTF-8">
     <title>Gaëtan Renaudeau</title>
+    <link rel="profile" href="http://www.w3.org/2006/03/hcard" />
     <link rel="stylesheet" href="main.css?v=2" />
     <link href='http://fonts.googleapis.com/css?family=Kreon|Ubuntu' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" type="image/png" href="favicon.png" />    
@@ -61,7 +62,7 @@ $(function(){
 
         <section class="articles">
           <h2>Last articles</h2>
-          <ul id="articles"><img src="load.gif" /></ul>
+          <ul id="articles"><img src="load.gif" alt="Loading..." /></ul>
           <script type="text/javascript">
             $(function(){
               $.getJSON('http://blog.greweb.fr/feed?feed=json&jsonp=?', function(data){
@@ -80,7 +81,7 @@ $(function(){
 
         <section class="twitts">
           <h2>Last twitts</h2>
-          <img id="twitterLoading" src="load.gif" />
+          <img id="twitterLoading" src="load.gif" alt="Loading..." />
           <script src="http://widgets.twimg.com/j/2/widget.js"></script>
           <script type="text/javascript">
             new TWTR.Widget({ version: 2, type: 'profile', rpp: 3, interval: 6000, width: 'auto', height: 400, theme: { shell: { background: 'transparent', color: '#123' }, tweets: { background: 'transparent', color: '#444', links: '#270' } }, features: { scrollbar: false, loop: false, live: false, hashtags: true, timestamp: true, avatars: false, behavior: 'all' } }).render().setUser('greweb').start();
