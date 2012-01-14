@@ -50,19 +50,6 @@ nav.externalLinks a:hover {
   -moz-transition-delay: 0s;
 }
 
-article#home > header, article#home > section {
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -webkit-transition: 0.3s background-color;
-  -moz-transition: 0.3s background-color;
-  -o-transition: 0.3s background-color;
-  transition: 0.3s background-color;
-}
-article#home > header:hover, article#home > section:hover {
-  background-color: #EFD;
-}
-
 a { 
   color:#33CC00; 
   text-decoration:none; 
@@ -94,10 +81,47 @@ section.articles {
 
 section.twitts {
   min-height: 150px;
+  border: #9AE4E8 solid 10px;
+  position: relative;
+  margin-right: 20px;
+}
+section.twitts:after {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border: 35px solid;
+  border-color: transparent transparent transparent #9AE4E8;
+  position: absolute;
+  right: -70px;
+  top: 10px;
+  z-index: 2;
+}
+section.twitts:before {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border: 20px solid;
+  border-color:  transparent transparent transparent white;
+  position: absolute;
+  right: -40px;
+  top: 25px;
+  z-index: 3;
 }
 
+section.quotes {
+  margin-top: 40px;
+}
+section.quotes em {
+  color: #aaa;
+}
 
-.twtr-hd, .twtr-ft {
+.twtr-ft a {
+  float: right;
+  background: #9AE4E8;
+  padding: 2px 7px;
+  border-radius: 5px;
+}
+.twtr-hd, .twtr-ft .twtr-join-conv {
   display: none;
 }
 .twtr-widget .twtr-tweet {
@@ -109,7 +133,7 @@ section.twitts {
 }
 
 #twtr-widget-1 .twtr-tweet a.twtr-user {
-    color: #00C !important;
+    color: #8AD4D8 !important;
     padding: 0px 4px;
     position: relative;
 }

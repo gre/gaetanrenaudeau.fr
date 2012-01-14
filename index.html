@@ -37,14 +37,19 @@ $(function(){
             available for <a href="mailto:renaudeau.gaetan@gmail.com">freelance</a>, 
             studying for a master at <a href="http://www.ensiie.fr">ensiie</a>.
           </h1>
-          <h2>See my <a href="portfolio">portfolio</a>.</h2>
+          <section>
+          <ul>
+            <li>co-author of the book <a href="http://www.apress.com/9781430239789">"HTML5 Games Most Wanted"</a>.</li>
+            <li><a href="http://greweb.fr/slider">Slider.js</a>: Slideshow with jQuery, CSS Transitions and Canvas.</li>
+            <li><a href="http://same.greweb.fr/">Same Game Gravity</a> for web, smartphones and tablets.</li>
+          </ul>
+          <h2>more on <a href="portfolio">portfolio</a>...</h2>
+        </section>
         </header>
 
 
       <aside>
         <img class="photo" src="http://farm5.static.flickr.com/4080/5410471068_41fedd5296_z.jpg" alt="" />
-
-
       </aside>
 
       <article id="home">
@@ -54,43 +59,27 @@ $(function(){
           <p>
         </section>
 
-        <section class="articles">
-          <h2>Last articles</h2>
-          <ul id="articles"><img src="load.gif" alt="Loading..." /></ul>
-          <script type="text/javascript">
-            $(function(){
-              $.getJSON('http://blog.greweb.fr/feed?feed=json&jsonp=?', function(data){
-               data.splice(3);
-                $('#articles').empty().append($.map(data, function(a){
-                    return $('<li class="article">'+
-                               '<a href="'+a.permalink+'" class="title">'+a.title+'</a>'+
-                               '<time>'+(prettyDate( (a.date) )||a.date)+'</time>'+
-                             '</li>').
-                           attr('title', $('<span />').html(a.excerpt).text() )[0];
-                }));
-              });
-            });
-          </script>
-  </section>
-
         <section class="twitts">
-          <h2>Last twitts</h2>
           <img id="twitterLoading" src="load.gif" alt="Loading..." />
           <script src="http://widgets.twimg.com/j/2/widget.js"></script>
           <script type="text/javascript">
-            new TWTR.Widget({ version: 2, type: 'profile', rpp: 3, interval: 6000, width: 'auto', height: 400, theme: { shell: { background: 'transparent', color: '#123' }, tweets: { background: 'transparent', color: '#444', links: '#270' } }, features: { scrollbar: false, loop: false, live: false, hashtags: true, timestamp: true, avatars: false, behavior: 'all' } }).render().setUser('greweb').start();
+            new TWTR.Widget({ version: 2, type: 'profile', rpp: 3, interval: 6000, width: 'auto', height: 400, theme: { shell: { background: 'transparent', color: '#123' }, tweets: { background: 'white', color: '#444', links: '#270' } }, features: { scrollbar: false, loop: false, live: false, hashtags: true, timestamp: true, avatars: false, behavior: 'all' } }).render().setUser('greweb').start();
             $('#twitterLoading').remove();
           </script>
         </section>
-      </article>
 
-      <section>
-        <h2>Someone has said...</h2>
-      <p>
-        <q>Simplicity is the ultimate sophistication.</q>
-        <em>Leonardo da Vinci.</em>
-      </p>
-      </section>
+        <section class="quotes">
+          <h2>Some quotes...</h2>
+          <p>
+            <q>Simplicity is the ultimate sophistication.</q>
+            <em>Leonardo da Vinci.</em>
+          </p>
+          <p>
+            <q>JavaScript has more in common with functional languages like Lisp or Scheme than with C or Java</q>
+            <em>Douglas Crockford</em>
+          </p>
+        </section>
+      </article>
 
       <footer>
         <a class="email" href="mailto:renaudeau.gaetan@gmail.com">renaudeau.gaetan@gmail.com</a>
