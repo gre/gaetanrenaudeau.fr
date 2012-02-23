@@ -1,9 +1,9 @@
 body {
   font: 1em Ubuntu, sans-serif;
-  background: #fff;
   font-weight: 400;
   padding: 20px;
   margin: 0px;
+  background: #fff;
 }
 
 h1,h2,h3,h4 {
@@ -80,10 +80,11 @@ section.articles {
 }
 
 section.twitts {
-  min-height: 150px;
-  border: #9AE4E8 solid 10px;
   position: relative;
+  border: #9AE4E8 solid 10px;
+  background: #fff;
   margin-right: 20px;
+  min-height: 150px;
 }
 section.twitts:after {
   content: ' ';
